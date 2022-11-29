@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KochonenNeuralNetwork", "KochonenNeuralNetwork\KochonenNeuralNetwork.csproj", "{32A512B7-BEA3-4247-8C30-9B999EA32FE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32A512B7-BEA3-4247-8C30-9B999EA32FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A512B7-BEA3-4247-8C30-9B999EA32FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A512B7-BEA3-4247-8C30-9B999EA32FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A512B7-BEA3-4247-8C30-9B999EA32FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB53C96A-DE34-42D6-B4F8-1775CCCEF64F}
+	EndGlobalSection
+EndGlobal
