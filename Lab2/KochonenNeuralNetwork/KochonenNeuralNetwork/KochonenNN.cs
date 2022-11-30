@@ -44,7 +44,7 @@ namespace KochonenNeuralNetwork
             foreach (var neighbour in neighbours)
             {
                 ModifyNeuronWeights(neighbour.i, neighbour.j, data);
-            }*
+            }
 
             return closestNeuron.j;
         }
