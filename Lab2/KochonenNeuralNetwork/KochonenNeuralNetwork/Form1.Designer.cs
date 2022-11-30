@@ -39,6 +39,7 @@ namespace KochonenNeuralNetwork
             this.ResetNetworkButton = new System.Windows.Forms.Button();
             this.StartButton = new System.Windows.Forms.Button();
             this.Plot = new ScottPlot.FormsPlot();
+            this.WinnerTakesAllCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.InitStudySpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EpochesToDecreaseStudySpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EpochesToReduceROI)).BeginInit();
@@ -155,11 +156,22 @@ namespace KochonenNeuralNetwork
             this.Plot.Size = new System.Drawing.Size(449, 426);
             this.Plot.TabIndex = 9;
             // 
+            // WinnerTakesAllCheckBox
+            // 
+            this.WinnerTakesAllCheckBox.AutoSize = true;
+            this.WinnerTakesAllCheckBox.Location = new System.Drawing.Point(15, 51);
+            this.WinnerTakesAllCheckBox.Name = "WinnerTakesAllCheckBox";
+            this.WinnerTakesAllCheckBox.Size = new System.Drawing.Size(107, 17);
+            this.WinnerTakesAllCheckBox.TabIndex = 10;
+            this.WinnerTakesAllCheckBox.Text = "Winner Takes All";
+            this.WinnerTakesAllCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.WinnerTakesAllCheckBox);
             this.Controls.Add(this.Plot);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.ResetNetworkButton);
@@ -192,6 +204,7 @@ namespace KochonenNeuralNetwork
         private System.Windows.Forms.Button ResetNetworkButton;
         private System.Windows.Forms.Button StartButton;
         private ScottPlot.FormsPlot Plot;
+        private System.Windows.Forms.CheckBox WinnerTakesAllCheckBox;
     }
 }
 

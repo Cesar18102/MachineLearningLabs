@@ -14,16 +14,18 @@ namespace KochonenNeuralNetwork
         private double _studySpeed;
         private int _currentROIWidth;
         private int _currentROIHeight;
+        private bool _winnerTakesAll;
 
         public double[,][] Weights { get; private set; }
 
-        public KochonenNN(int inputSize, int clustersCount, double startStudySpeed)
+        public KochonenNN(int inputSize, int clustersCount, double startStudySpeed, bool winnerTakesAll)
         {
             _inputSize = inputSize;
             _clustersCount = clustersCount;
             _studySpeed = startStudySpeed;
             _currentROIWidth = clustersCount % 2 == 0 ? clustersCount - 1 : clustersCount;
             _currentROIHeight = inputSize % 2 == 0 ? inputSize - 1 : inputSize;
+            _winnerTakesAll = winnerTakesAll;
 
             Weights = new double[inputSize, clustersCount][];
 
@@ -39,11 +41,19 @@ namespace KochonenNeuralNetwork
         public int ProcessInput(double[] data)
         {
             var closestNeuron = FindClosestNeuron(data);
-            var neighbours = GetNeighbours(closestNeuron.i, closestNeuron.j);
 
-            foreach (var neighbour in neighbours)
+            if (_winnerTakesAll)
             {
-                ModifyNeuronWeights(neighbour.i, neighbour.j, data);
+                ModifyNeuronWeights(closestNeuron.i, closestNeuron.j, data);
+            }
+            else
+            {
+                var neighbours = GetNeighbours(closestNeuron.i, closestNeuron.j);
+
+                foreach (var neighbour in neighbours)
+                {
+                    ModifyNeuronWeights(neighbour.i, neighbour.j, data);
+                }
             }
 
             return closestNeuron.j;

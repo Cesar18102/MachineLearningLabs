@@ -152,7 +152,7 @@ namespace KochonenNeuralNetwork
 
         private void ResetNetwork()
         {
-            _kochonenNN = new KochonenNN(2, 3, Convert.ToDouble(InitStudySpeed.Value));
+            _kochonenNN = new KochonenNN(2, 3, Convert.ToDouble(InitStudySpeed.Value), WinnerTakesAllCheckBox.Checked);
         }
 
         private void StartButton_Click(object sender, EventArgs e)
